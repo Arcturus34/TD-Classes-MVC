@@ -1,21 +1,14 @@
+import { View } from "./../views/view.js";
+import { Controller } from "./../controllers/controller.js";
 import { Counter } from "./../models/counter.js"
 
 const Conteur = new Counter();
 
 console.log(Conteur.value);
 
-function inc(){
-    Conteur.incrementValue();
-    console.log(Conteur.value);
+function CV(){
+        let controller = new Controller();
+        let view = new View(controller);
 }
 
-function dec(){
-    Conteur.decrementValue();
-    console.log(Conteur.value);
-}
-
-let button_inc = document.querySelector("#btn-increment");
-let button_dec = document.querySelector("#btn-decrement");
-
-button_inc.addEventListener("click", inc);
-button_dec.addEventListener("click", dec)
+window.addEventListener("load",CV);
